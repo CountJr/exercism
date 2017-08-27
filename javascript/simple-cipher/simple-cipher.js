@@ -16,7 +16,8 @@ class simpleCipher {
   }
 
   isKeyNotValid(key) {
-    return typeof key !=='undefined' && !key.match(/[a-z]+/);
+    const re = new RegExp(`^[${this.charset}]+$`);
+    return typeof key !=='undefined' && !key.match(re);
   }
 
   generateKey(length) {
@@ -32,10 +33,13 @@ class simpleCipher {
   }
 
   decodeChar(textChar, keyChar) {
-    return this.charset[(this.charset.indexOf(textChar) + this.charset.length - this.charset.indexOf(keyChar)) % this.charset.length];
+    return this.charset[
+      (this.charset.indexOf(textChar) + this.charset.length - this.charset.indexOf(keyChar))
+      % this.charset.length
+    ];
   }
 }
 
 
 
-module.exports = simpleCipher
+module.exports = simpleCipher;
