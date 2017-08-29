@@ -20,14 +20,14 @@ const years = (secs, planet) => {
 class SpaceAge {
   constructor(time) {
     this.seconds = time;
-    this.onMercury = () => years(this.seconds, 'mercury');
-    this.onEarth = () => years(this.seconds, 'earth');
-    this.onVenus = () => years(this.seconds, 'venus');
-    this.onMars = () => years(this.seconds, 'mars');
-    this.onJupiter = () => years(this.seconds, 'jupiter');
-    this.onSaturn = () => years(this.seconds, 'saturn');
-    this.onUranus = () => years(this.seconds, 'uranus');
-    this.onNeptune = () => years(this.seconds, 'neptune');
+    this.onMercury = () => years(time, 'mercury');
+    this.onEarth = () => years(time, 'earth');
+    this.onVenus = () => years(time, 'venus');
+    this.onMars = () => years(time, 'mars');
+    this.onJupiter = () => years(time, 'jupiter');
+    this.onSaturn = () => years(time, 'saturn');
+    this.onUranus = () => years(time, 'uranus');
+    this.onNeptune = () => years(time, 'neptune');
   }
 }
 
